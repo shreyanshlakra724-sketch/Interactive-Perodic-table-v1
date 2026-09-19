@@ -7,6 +7,11 @@ function Navbar () {
   return (
     <nav id="navbar">
     <h1>Interactive Perodic Table</h1>
+    <div className="nav-links">
+        <a href="#">Elements</a>
+        <a href="#">Blocks</a>
+        <a href="#">Groups</a>
+    </div>
     </nav>
   );  
 } 
@@ -21,25 +26,48 @@ function GridMaker() {
             .catch((error) => console.error("Error fetching elements:", error))
     }, [])
 
+    f
+
     return (
         <div className="grid-maker">
             {elements.map((element) => (
                 <ElementID
                     key={element.symbol}
                     symbol={element.symbol}
-                    group={element.group}
-                    period={element.period}
+                    gridColumn={element.grid_column}
+                    gridRow={element.grid_row}
                 />
             ))}
+            <div
+            className = "ElementID"
+            style = {{gridColumn:3, gridRow : 6}}
+            >
+                57-71
+            </div>
+
+            <div
+            className = "ElementID"
+            style = {{gridColumn:3, gridRow : 7}}
+            >
+                89-103
+            </div>
+
+
+
+
+            
+
+
+
         </div>
     )
 }
 
-function ElementID({symbol, group, period}) {
+function ElementID({symbol, gridColumn, gridRow}) {
     return (
-        <div className = "ElementID" style = {{gridColumn: group, gridRow: period}}>
+        <div className = "ElementID" style = {{gridColumn: gridColumn, gridRow: gridRow}}>
             {symbol}
-
+        
 
         </div>
 

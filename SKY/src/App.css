@@ -10,27 +10,51 @@ body {
 }
 
 #navbar {
+  font-family: DM Sans, sans-serif;
+  font-weight: bold;
   padding: 20px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 
+  border-bottom: 1px solid #cccccc;
 }
 
 #navbar h1{
+  font-family: DM Sans, sans-serif;
+  font-weight: bold;
   margin: 0;
-  text-align: center;
   font-weight: bold;
 
+}
+
+.nav-links {
+  font-family: DM Sans, sans-serif;
+  font-weight: bold;
+  display: flex;
+  gap: 20px;
+  opacity: 0.8;
+}
+
+.nav-links a {
+  font-family: DM Sans, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3333;
+  font-weight: bold;
+  opacity: 0.8;
 }
 
 .grid-maker {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 70px);
   gap: 20px;
   padding: 20px;
 }
 
-.element {
+.ElementID {
   background-color: #ffffff;
   border: 1px solid #cccccc;
   padding: 10px;
